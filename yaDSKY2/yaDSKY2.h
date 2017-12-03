@@ -86,6 +86,8 @@ public:
 private:
     virtual void Notify();
     void ActOnIncomingIO (unsigned char *Packet);
+    int Rly2INt (int Value);
+    void Lamp(int Value, int State);
 };
 
 
@@ -111,6 +113,7 @@ public:
     wxBitmapButton *iLastButton;
     int ParseCfg (wxString &Filename);
     void HalveTheWindow (void);
+    int Rly2INt (int Value);	
       
 private:
     // begin wxGlade: MainFrame::methods
@@ -122,6 +125,7 @@ private:
     void OutputKeycode (int Keycode);
     void OutputPro (int OffOn);
     void MatchCheck (void);
+
 
 //protected:
 public:
